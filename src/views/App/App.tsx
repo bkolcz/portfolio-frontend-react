@@ -1,6 +1,7 @@
 import React from 'react';
 // import logo from './logo.svg';
-import './App.css';
+import '../../styles/app/app.scss';
+import Login from '../Login/Login';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           Backend address: <b>{process.env.REACT_APP_BACKEND}</b>
         </p>
       </header>
+      <Login />
     </div>
   );
 }

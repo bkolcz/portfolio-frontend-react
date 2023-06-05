@@ -1,0 +1,37 @@
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: max-content;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em;
+    }
+
+    .login-label {
+        padding: 0.5em;
+    }
+
+    .login-input {
+        padding: 0.5em;
+    }
+
+    .login-button {
+        padding: 0.5em;
+        border-radius: 5px;
+
+        &:hover {
+            opacity: 75%;
+        }
+    }
+
+    .login-button-register {
+        background-color: orange;
+    }
+
+    .login-button-sign-in {
+        background-color: greenyellow;
+    }
+}
