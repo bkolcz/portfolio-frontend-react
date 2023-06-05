@@ -1,6 +1,6 @@
 export class AuthService {
     private rootUrl: string|undefined = process.env.REACT_APP_BACKEND;
-    
+
     async signIn(username: string, password: string): Promise<Response> { 
         const response = await fetch(this.rootUrl + "auth/login", {
             method: "POST",

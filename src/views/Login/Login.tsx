@@ -1,5 +1,4 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import '../../styles/login/login.scss';
 import { AuthService } from '../../services/auth/auth.service';
 
@@ -15,8 +14,11 @@ export default function Login() {
         console.log(`You tried to log in with login: ${login} and password: ${password}`);
         try {
             const response = await authService.signIn(login, password);
+            const responseJson = await response.json();
             console.log(response);
             // TODO authorized session
+            sessionStorage.setItem("t",responseJson.access_token);
+            // TODO redirect to logged in and authorized
         } catch {
             // TODO failed login
         }
@@ -27,8 +29,8 @@ export default function Login() {
         // TODO encrypt/hash password
         const response = await authService.register(login, password);
         const status = response.status !== 201;
-        setRegister( status ? "Failed" : "Success");
-        setRegisterClass( status ? "register-status register-failed" : "register-status register-success");
+        setRegister(status ? "Failed" : "Success");
+        setRegisterClass(status ? "register-status register-failed" : "register-status register-success");
     }
 
     return (
