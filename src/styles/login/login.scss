@@ -34,4 +34,19 @@
     .login-button-sign-in {
         background-color: greenyellow;
     }
+    .register-status {
+        border: 1px solid white;
+        border-radius: 3px;
+        font-size: larger;
+        text-align: center;
+        padding: 7px;
+    }
+    .register-failed {
+        color: red;
+        border-color: red;
+    }
+    .register-success {
+        color: green;
+        border-color: green;
+    }
 }
